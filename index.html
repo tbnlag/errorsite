@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue Star Games — Under Development</title>
+    <meta
+      name="description"
+      content="Blue Star Games is currently under development. We're building something awesome for players at bluestargames.online."
+    />
+    <meta property="og:title" content="Blue Star Games — Under Development" />
+    <meta
+      property="og:description"
+      content="Our website is under development. Check back soon!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.bluestargames.online" />
+    <meta name="theme-color" content="#0b1022" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #070b18;
+        --bg-alt: #0d1631;
+        --card: rgba(15, 24, 52, 0.85);
+        --text: #e7eeff;
+        --muted: #9fb0dc;
+        --accent: #4ea7ff;
+        --accent-2: #6bf0ff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 20% 20%, rgba(78, 167, 255, 0.22), transparent 40%),
+          radial-gradient(circle at 80% 10%, rgba(107, 240, 255, 0.2), transparent 35%),
+          linear-gradient(160deg, var(--bg), var(--bg-alt));
+        padding: 1.5rem;
+      }
+
+      .card {
+        width: min(680px, 100%);
+        background: var(--card);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+        padding: clamp(1.5rem, 5vw, 3rem);
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--accent-2);
+        padding: 0.45rem 0.75rem;
+        border: 1px solid rgba(107, 240, 255, 0.35);
+        border-radius: 999px;
+        background: rgba(107, 240, 255, 0.08);
+      }
+
+      .dot {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: var(--accent-2);
+        box-shadow: 0 0 10px rgba(107, 240, 255, 0.9);
+      }
+
+      h1 {
+        margin: 1.25rem 0 0.75rem;
+        font-size: clamp(1.9rem, 4.4vw, 3rem);
+        line-height: 1.1;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        font-size: clamp(1rem, 2.2vw, 1.1rem);
+      }
+
+      .domain {
+        margin-top: 1.2rem;
+        display: inline-block;
+        font-weight: 600;
+        color: var(--accent);
+      }
+
+      footer {
+        margin-top: 1.6rem;
+        font-size: 0.9rem;
+        color: #8ca1d4;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <span class="badge"><span class="dot" aria-hidden="true"></span>Under Development</span>
+      <h1>Blue Star Games is launching soon.</h1>
+      <p>
+        We’re building an awesome new experience for gamers. Our website is currently under
+        development — check back soon for updates.
+      </p>
+      <span class="domain">www.bluestargames.online</span>
+      <footer>© <span id="year"></span> Blue Star Games. All rights reserved.</footer>
+    </main>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
